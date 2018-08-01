@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 
+#define PI 3.1415
+
 using namespace std;
 
 void Ejer1();
@@ -69,6 +71,7 @@ void Ejer1() {
 
 void Ejer2() {
     double x, y, z, area, s;
+	double x2, y2, z2;
 	cout<<"Ingrese el primer lado: "<<endl;
 	cin>> x;
 	cout<<"Ingrese el segundo lado: "<<endl;
@@ -82,27 +85,26 @@ void Ejer2() {
 
 		area = sqrt(s * (s-x) * (s-y) * (s-z));
 
-		cout<<area<<endl;
-		Dimensiones(x,y,z);
-		Dimensiones(y,z,x);
-		Dimensiones(z,x,y);
+		cout<<"El Area es: "<<area<<endl;
 		cout<<"Es un Triangulo Rectangulo"<<endl;
+
+		double angleB = 0;
+		double angleA = 0;
+		double angleC = 0;
+
+		angleB = acos(((y*y*-1) + x*x + z*z) / (2*x*z));
+		angleA = asin(((x*x*-1) + y*y + z*z) / (2*y*z));
+		angleC = 180 - angleA - angleB;
+		angleB = (angleB * 180) / PI;
+		angleC = (angleC * 180) / PI;
+		angleA = (angleA * 180) / PI;
+		cout<<"Angulo A:"<<angleA<<endl;
+		cout<<"Angulo B:"<<angleB<<endl;
+		cout<<"Angulo C:"<<angleC<<endl;
+
 	}else{
 		cout<<"No es un triangulo rectangulo"<<endl;
 	}
-}
-
-void Dimensiones(double x, double y, double z) {
-	double angleB = 0;
-	double angleA = 0;
-	double angleC = 0;
-
-	angleB = acos((y*y - x*x - z*z) / (-2*x*z));
-	angleA = asin((x*x - y*y - z*z) / (-2*y*z));
-	angleC = 180 - angleA - angleB;
-	cout<<"Angulo A:"<<angleA<<endl;
-	cout<<"Angulo B:"<<angleB<<endl;
-	cout<<"Angulo C:"<<angleC<<endl;
 }
 
 void Ejer3() {
