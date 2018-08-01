@@ -35,11 +35,29 @@ int main(){
                 break;    	
 		}
 	}while(opcion != 4);
-	return 0;
+	return opcion;
 }
 
 void Ejer1() {
-	cout<<"Nada Todavia"<<endl;
+	int impar = -1;
+	int n, total;
+	cout<<"Ingrese el numero de cubos: "<<endl;
+	cin>> n;
+
+	for(int i = 1; i <= n; i++){
+		impar = impar + 2;
+		total = impar;
+		cout<<i<<"^3"<<"=";
+		
+		for(int j = 2; j <= i; j++){
+			impar = impar + 2;
+			total = total + impar;
+		}
+
+		cout<<total<<endl;
+		 
+	}
+	
 
 }
 
