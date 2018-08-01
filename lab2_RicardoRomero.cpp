@@ -6,6 +6,7 @@ using namespace std;
 void Ejer1();
 void Ejer2();
 void Ejer3();
+void Dimensiones(double,double,double);
 
 int main(){
 
@@ -67,7 +68,7 @@ void Ejer1() {
 }
 
 void Ejer2() {
-    int x, y, z, area, s;
+    double x, y, z, area, s;
 	cout<<"Ingrese el primer lado: "<<endl;
 	cin>> x;
 	cout<<"Ingrese el segundo lado: "<<endl;
@@ -82,6 +83,9 @@ void Ejer2() {
 		area = sqrt(s * (s-x) * (s-y) * (s-z));
 
 		cout<<area<<endl;
+		Dimensiones(x,y,z);
+		Dimensiones(y,z,x);
+		Dimensiones(z,x,y);
 		cout<<"Es un Triangulo Rectangulo"<<endl;
 	}else{
 		cout<<"No es un triangulo rectangulo"<<endl;
@@ -89,9 +93,16 @@ void Ejer2() {
 }
 
 void Dimensiones(double x, double y, double z) {
-	double angle = 0;
+	double angleB = 0;
+	double angleA = 0;
+	double angleC = 0;
 
-	
+	angleB = acos((y*y - x*x - z*z) / (-2*x*z));
+	angleA = asin((x*x - y*y - z*z) / (-2*y*z));
+	angleC = 180 - angleA - angleB;
+	cout<<"Angulo A:"<<angleA<<endl;
+	cout<<"Angulo B:"<<angleB<<endl;
+	cout<<"Angulo C:"<<angleC<<endl;
 }
 
 void Ejer3() {
