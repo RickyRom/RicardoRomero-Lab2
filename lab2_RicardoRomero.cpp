@@ -48,15 +48,18 @@ void Ejer1() {
 	for(int i = 1; i <= n; i++){
 		impar = impar + 2;
 		total = impar;
-		cout<<i<<"^3"<<"=";
+		cout<<i<<"^3"<<"="<<impar<<"+";
 		
 		for(int j = 2; j <= i; j++){
 			impar = impar + 2;
 			total = total + impar;
-			cout<<j<<endl;
+			if(j != n) {
+			cout<<impar<<"+";
+			}else{
+				cout<<impar;
+			}			
 		}
-
-		cout<<total<<endl;
+		cout<<"="<<total<<endl;
 		 
 	}
 	
@@ -64,20 +67,31 @@ void Ejer1() {
 }
 
 void Ejer2() {
-    int l1, l2, l3, area, s;
+    int x, y, z, area, s;
 	cout<<"Ingrese el primer lado: "<<endl;
-	cin>> l1;
+	cin>> x;
 	cout<<"Ingrese el segundo lado: "<<endl;
-	cin>> l2;
+	cin>> y;
 	cout<<"Ingrese el tercer lado: "<<endl;
-	cin>> l3;
+	cin>> z;
 
-	if(l2*l2 + l3*l3 == l1*l1 || l1*l1 + l3*l3 == l2*l2 || l1*l1 + l2*l2 = l3*l3) {
+	if(y*y + z*z == x*x || x*x + z*z == y*y || x*x + y*y == z*z) {
 		
-		s = (l1+l2+l3) / 2;
+		s = (x+y+z) / 2;
 
-		area = sqrt(s * (s-l1) * (s-l2) * (s-l3));
+		area = sqrt(s * (s-x) * (s-y) * (s-z));
+
+		cout<<area<<endl;
+		cout<<"Es un Triangulo Rectangulo"<<endl;
+	}else{
+		cout<<"No es un triangulo rectangulo"<<endl;
 	}
+}
+
+void Dimensiones(double x, double y, double z) {
+	double angle = 0;
+
+	
 }
 
 void Ejer3() {
