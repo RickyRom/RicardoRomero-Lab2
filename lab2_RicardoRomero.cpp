@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -52,6 +53,7 @@ void Ejer1() {
 		for(int j = 2; j <= i; j++){
 			impar = impar + 2;
 			total = total + impar;
+			cout<<j<<endl;
 		}
 
 		cout<<total<<endl;
@@ -69,6 +71,13 @@ void Ejer2() {
 	cin>> l2;
 	cout<<"Ingrese el tercer lado: "<<endl;
 	cin>> l3;
+
+	if(l2*l2 + l3*l3 == l1*l1 || l1*l1 + l3*l3 == l2*l2 || l1*l1 + l2*l2 = l3*l3) {
+		
+		s = (l1+l2+l3) / 2;
+
+		area = sqrt(s * (s-l1) * (s-l2) * (s-l3));
+	}
 }
 
 void Ejer3() {
