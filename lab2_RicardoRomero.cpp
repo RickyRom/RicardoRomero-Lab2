@@ -62,7 +62,13 @@ void Ejer1() {
 }
 
 void Ejer2() {
-    cout<<"Nada Todavia"<<endl;
+    int l1, l2, l3, area, s;
+	cout<<"Ingrese el primer lado: "<<endl;
+	cin>> l1;
+	cout<<"Ingrese el segundo lado: "<<endl;
+	cin>> l2;
+	cout<<"Ingrese el tercer lado: "<<endl;
+	cin>> l3;
 }
 
 void Ejer3() {
