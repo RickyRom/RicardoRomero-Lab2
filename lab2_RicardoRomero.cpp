@@ -63,11 +63,8 @@ void Ejer1() {
 				cout<<impar;
 			}			
 		}
-		cout<<"="<<total<<endl;
-		 
+		cout<<"="<<total<<endl;	 
 	}
-	
-
 }
 
 void Ejer2() {
