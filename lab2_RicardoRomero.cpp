@@ -9,6 +9,7 @@ void Ejer1();
 void Ejer2();
 void Ejer3();
 void Dimensiones(double,double,double);
+bool primeN(int);
 
 int main(){
 
@@ -108,7 +109,8 @@ void Ejer2() {
 }
 
 void Ejer3() {
-    int n, d, r;
+    int n, d, r, sum;
+	int cont = 0;
     cout<<"Ingrese el Numero n: "<<endl;
     cin>> n;
     
@@ -118,7 +120,22 @@ void Ejer3() {
 
 			r = (i + n) / i;
 			d = r + n;
+
+			if(primeN(r)) {
+				cont += r;
+				cout<<"Hizo la Suma"<<endl;
+			}
         }
     }
-	cout<<"La Suma es de: "<< d <<endl;
+	cout<<"La Suma es de: "<< cont <<endl;
+}
+
+bool primeN(int primo) {
+	for(int i = 2; i < primo; i++){
+		if(primo % 2 != 0) {
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
